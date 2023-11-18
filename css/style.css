@@ -1,7 +1,7 @@
 :root {
   --white: #ffffff;
   --black: #000000;
-  --yellow: #B88E2F;
+  --yellow: #b88e2f;
 }
 /*
   1. Use a more-intuitive box-sizing model.
@@ -20,6 +20,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   list-style: none;
   text-decoration: none;
 }
@@ -31,6 +32,11 @@ html {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
 }
 /*
     5. Improve media defaults
@@ -87,15 +93,14 @@ nav {
 }
 
 .btn-cta {
-    width: 222px;
-    height: 74px;
-    border: none;
-    outline: none;
-    background-color: var(--yellow);
-    color: var(--white);
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
+  padding: 1rem 3rem;
+  border: none;
+  outline: none;
+  background-color: var(--yellow);
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .navbar-container {
@@ -117,10 +122,11 @@ nav {
   gap: 10px;
 }
 
-.logo span {
+.logo a {
   font-size: 2.125rem;
   font-weight: bold;
   cursor: pointer;
+  color: var(--black);
 }
 
 .nav-links ul {
@@ -133,6 +139,10 @@ nav {
 .nav-links a {
   text-decoration: none;
   color: var(--black);
+}
+
+.nav-links a:hover {
+  text-decoration: underline 5px var(--yellow);
 }
 
 .nav-icons {
@@ -157,9 +167,9 @@ nav {
 }
 
 .hero-container button {
-    position: absolute;
-    top: 462px;
-    right: 430px;
+  position: absolute;
+  top: 462px;
+  right: 430px;
 }
 
 /* header section ends */
