@@ -80,7 +80,7 @@ h6 {
   isolation: isolate;
 }
 
-/* header section starts */
+/* navbar and hero section starts */
 
 header {
   width: 100%;
@@ -119,9 +119,8 @@ nav {
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 }
 
 .logo a {
@@ -130,6 +129,9 @@ nav {
   word-spacing: 2rem;
   cursor: pointer;
   color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .nav-links ul {
@@ -175,11 +177,11 @@ nav {
   right: 430px;
 }
 
-/* header section ends */
+/* navbar and hero section ends */
 
 /* main content section starts */
 
-/* browse the ranges section */
+/* categories section */
 main {
   width: 1183px;
   height: 685px;
@@ -187,6 +189,7 @@ main {
   background-color: #f5f5f5;
   text-align: center;
   text-transform: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 main h1 {
@@ -197,13 +200,13 @@ main h1 {
 }
 
 main p {
-  font-size: 20;
+  font-weight: semiBold;
   color: var(--light-gray);
 }
 
 .categories {
   display: flex;
-  margin: 4rem auto;
+  margin: 3.5rem auto;
   gap: 20px;
 }
 
@@ -230,9 +233,11 @@ main p {
 }
 
 .cat__item p {
-  font-size: 24;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: bold;
   color: var(--dark-gray);
 }
 
 /* main content section ends */
+
+
