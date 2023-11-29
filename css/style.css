@@ -1,0 +1,325 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --yellow: #b88e2f;
+  --light-gray: #666;
+  --dark-gray: #333;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* navbar and hero section starts */
+
+header {
+  width: 100%;
+}
+/* navbar section */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1030;
+  background-color: var(--white);
+}
+
+.btn-cta {
+  padding: 1rem 3rem;
+  border: none;
+  outline: none;
+  background-color: var(--yellow);
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.navbar-container {
+  height: 100px;
+  width: 1286px;
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+  mix-blend-mode: multiply;
+}
+
+.navbar-container > * {
+  flex: 1;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+}
+
+.logo-link {
+  width: max-content;
+}
+
+.logo-link a {
+  font-size: 2.125rem;
+  font-weight: bold;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 7.5px;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  font-weight: 600;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.nav-links a:hover {
+  transform: scale(1.25);
+  border-bottom: 3px solid var(--yellow);
+}
+
+.nav-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-icons li {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* hero section */
+.hero-container {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 1440px;
+  height: 717px;
+  position: relative;
+  object-fit: cover;
+}
+
+.hero-container button {
+  position: absolute;
+  top: 462px;
+  right: 430px;
+}
+
+/* navbar and hero section ends */
+
+/* main content section starts */
+
+/* categories section */
+main {
+  width: 1183px;
+  height: 685px;
+  margin: 5rem auto;
+  background-color: #f5f5f5;
+  text-align: center;
+  text-transform: none;
+  font-family: "Poppins", sans-serif;
+}
+
+main h1 {
+  font-size: 32;
+  font-weight: bold;
+  color: var(--dark-gray);
+  text-transform: capitalize;
+}
+
+main p {
+  font-weight: semiBold;
+  color: var(--light-gray);
+}
+
+.categories {
+  display: flex;
+  margin: 3.5rem auto;
+  gap: 20px;
+}
+
+.categories > * {
+  flex: 1;
+}
+
+.cat__item {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cat__item img {
+  cursor: pointer;
+}
+
+.cat__item img:hover {
+  box-shadow: 1px 1px #373737, 2px 2px #373737, 3px 3px #373737, 4px 4px #373737,
+    5px 5px #373737, 6px 6px #373737;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  transition: 0.5s ease;
+}
+
+.cat__item p {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--dark-gray);
+}
+
+/* main content section ends */
+
+/* products section starts */
+.products {
+  width: 1236px;
+  height: 1084px;
+  margin-inline: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.products h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 40px;
+  font-weight: bold;
+  color: #3a3a3a;
+  margin-bottom: 1rem;
+}
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.products__grid__item {
+  width: 285px;
+  height: 446px;
+  background-color: #f4f5f7;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.products__discImg,
+.products__newImg {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products__discImg {
+  background-color: #e97171;
+}
+.products__newImg {
+  background-color: #2ec1ac;
+}
+
+.products__grid__item img {
+  
+}
+
+
+
+
+
+
+
+
+/* fix html codes to include this class */
+.products__grid__item__desc {
+  margin: 0.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.products__price {
+  display: flex;
+  gap: 20px;
+}
+
+/* products section ends */
